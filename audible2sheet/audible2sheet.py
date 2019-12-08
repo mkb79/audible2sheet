@@ -106,8 +106,7 @@ class AudibleClient:
         # Try to restore session from file if possible
         try:
             auth = audible.FileAuthenticator(
-                filename=self._session_file, locale=self._locale, 
-                register=True
+                filename=self._session_file, locale=self._locale
             )
             self._client = audible.AudibleAPI(auth)
         except Exception as msg:
